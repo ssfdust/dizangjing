@@ -104,7 +104,7 @@ class TextChecker(object):
         return cnt
 
 
-with open('dizangjing.txt', 'r') as f:
+with open('dizangjing.txt', 'r', encoding='utf-8') as f:
     text = f.read()
     t = TextChecker(text)
     t.toveccnt()
@@ -112,7 +112,7 @@ with open('dizangjing.txt', 'r') as f:
 
 app = Flask(__name__)
 
-@app.route('/<int:cut>/<int:cnt>')
+@app.route('/dizangjing/<int:cut>/<int:cnt>')
 def index(cut, cnt):
     t.result = []
     t.smart_cut(cut)

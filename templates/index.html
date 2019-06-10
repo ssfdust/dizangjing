@@ -29,30 +29,27 @@
     <div class="pure-u-1 pure-u-md-4-24">
     </div>
 
-    <div class="content pure-u-1 pure-u-md-16-24">
-        <div>
-            <!-- A wrapper for all the blog posts -->
-            <div class="posts">
-                <div style="margin:0 auto">
-                    <a href="{{ url_for('index', cnt=cnt-1, cut=cut)}}">上一页</a>
-                    <select id="state" class="pure-input-1-2" onchange="window.location=this.value;">
-                        {{ options | safe}}
-                    </select>
-                    <a href="{{ url_for('index', cnt=cnt+1, cut=cut)}}">下一页</a>
-                </div>
+    <div class="pure-u-1 pure-u-md-16-24">
+        <form class="header pure-form pure-form-aligned">
+            <fieldset>
+                <a href="{{ url_for('index', cnt=cnt-1, cut=cut)}}">上一页</a>
+                <select id="state" class="pure-input-1-24" onchange="window.location=this.value;">
+                    {{ options | safe}}
+                </select>
+                <a href="{{ url_for('index', cnt=cnt+1, cut=cut)}}">下一页</a>
+            </fieldset>
+        </form>
 
-                <!-- A single blog post -->
-                <section>
-                    {{ html | safe }}
-                </section>
-            </div>
+        <!-- A single blog post -->
+        <section>
+            {{ html | safe }}
+        </section>
 
-            <div class="footer">
-                <div class="pure-menu pure-menu-horizontal">
-                    <ul>
-                        <li class="pure-menu-item">合计{{ hanlen }}个字</li>
-                    </ul>
-                </div>
+        <div class="footer">
+            <div class="pure-menu pure-menu-horizontal">
+                <ul>
+                    <li class="pure-menu-item">合计{{ hanlen }}个字</li>
+                </ul>
             </div>
         </div>
     </div>
