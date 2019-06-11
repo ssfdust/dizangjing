@@ -110,7 +110,11 @@ with open('dizangjing.txt', 'r', encoding='utf-8') as f:
     t.toveccnt()
     t.countval()
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/dizangjing/static')
+
+@app.route('/dizangjing/')
+def jingwen():
+    return text
 
 @app.route('/dizangjing/<int:cut>/<int:cnt>')
 def index(cut, cnt):
@@ -133,7 +137,7 @@ def index(cut, cnt):
             options += f"<option value='{url}'>{i + 1}</option>"
         else:
             options += f"<option value='{url}' selected=\"selected\">{i + 1}</option>"
-    return render_template('index.html', html=html,
+    return render_template('page.html', html=html,
                            hanlen=hanlen,
                            options=options,
                            cut=cut,
