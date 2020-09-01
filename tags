@@ -1,12 +1,17 @@
 !_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
 !_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
-!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
-!_TAG_PROGRAM_NAME	Exuberant Ctags	//
-!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/a3c87ab5/
+.footer	static/style.css	/^.footer {$/;"	c
+.header	static/style.css	/^.header {$/;"	c
 TextChecker	app.py	/^class TextChecker(object):$/;"	c
 __init__	app.py	/^    def __init__(self, text):$/;"	m	class:TextChecker
 app	app.py	/^app = Flask(__name__, static_url_path='\/dizangjing\/static')$/;"	v
+body	static/style.css	/^body {$/;"	s
 countch	app.py	/^    def countch(self, sens):$/;"	m	class:TextChecker
 countergen	app.py	/^    def countergen(self):$/;"	m	class:TextChecker
 countval	app.py	/^    def countval(self):$/;"	m	class:TextChecker
@@ -15,8 +20,11 @@ hanlen	app.py	/^    def hanlen(self, text):$/;"	m	class:TextChecker
 index	app.py	/^def index(cut, cnt):$/;"	f
 is_chinese	app.py	/^    def is_chinese(self, ch):$/;"	m	class:TextChecker
 jingwen	app.py	/^def jingwen():$/;"	f
+layout	templates/page.html	/^<div id="layout" class="pure-g">$/;"	I
+p	static/style.css	/^p {$/;"	s
 rangetotxt	app.py	/^    def rangetotxt(self, start, end):$/;"	m	class:TextChecker
 smart_cut	app.py	/^    def smart_cut(self, length):$/;"	m	class:TextChecker
-t	app.py	/^    t = TextChecker(text)$/;"	v	class:TextChecker
-text	app.py	/^    text = f.read()$/;"	v	class:TextChecker
+state	templates/page.html	/^                <select id="state" class="pure-input-1-24" onchange="window.location=this.value;/;"	I
+t	app.py	/^    t = TextChecker(text)$/;"	v
+text	app.py	/^    text = f.read()$/;"	v
 toveccnt	app.py	/^    def toveccnt(self):$/;"	m	class:TextChecker
